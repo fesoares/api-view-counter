@@ -17,15 +17,15 @@ export class UserService {
     return result;
   }
 
-  async findById(id: number) {
-    // ...
-  }
+  // async findById(id: number) {
+  //   // ...
+  // }
 
-  async update(user: User) {
-    // ...
-  }
+  // async update(user: User) {
+  //   // ...
+  // }
 
-  async remove(user: User) {
-    // ...
-  }
+  // async remove(user: User) {
+  //   // ...
+  // }
 }
