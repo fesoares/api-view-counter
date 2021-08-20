@@ -1,7 +1,7 @@
-import { Counter } from './counter.model';
+// import { Counter } from './counter.model';
 
-describe('CounterModel', () => {
-  it('should be defined', () => {
-    expect(new Counter()).toBeDefined();
-  });
-});
+// describe('CounterModel', () => {
+//   it('should be defined', () => {
+//     expect(new Counter()).toBeDefined();
+//   });
+// });
