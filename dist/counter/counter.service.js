@@ -20,13 +20,13 @@ let CounterService = class CounterService {
     constructor(counterModel) {
         this.counterModel = counterModel;
     }
-    async create(doc) {
-        const result = await new this.counterModel(doc).save();
-        return result.id;
-    }
     async getAll() {
         const result = await this.counterModel.find().exec();
         return result;
+    }
+    async create(doc) {
+        const result = await new this.counterModel(doc).save();
+        return result.id;
     }
 };
 CounterService = __decorate([

@@ -7,8 +7,9 @@ export class CounterController {
   constructor(private service: CounterService) {}
 
   @Get()
-  getAll() {
-    return this.service.getAll();
+  async getAll() {
+    const request = await this.service.getAll();
+    return request.length;
   }
 
   @Post('create')

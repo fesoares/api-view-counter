@@ -9,13 +9,13 @@ export class CounterService {
     @InjectModel('Counter') private readonly counterModel: Model<Counter>,
   ) {}
 
-  async create(doc: Counter) {
-    const result = await new this.counterModel(doc).save();
-    return result.id;
-  }
-
   async getAll(): Promise<Counter[]> {
     const result = await this.counterModel.find().exec();
     return result;
+  }
+
+  async create(doc: Counter) {
+    const result = await new this.counterModel(doc).save();
+    return result.id;
   }
 }
