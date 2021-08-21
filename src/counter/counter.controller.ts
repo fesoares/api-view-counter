@@ -8,8 +8,8 @@ export class CounterController {
 
   @Get()
   async getAll() {
-    const request = await this.service.getAll();
-    return request.length;
+    const responses = await this.service.getAll();
+    return `views: ${responses.views.length} | clicks: ${responses.clicks.length}`;
   }
 
   @Post('create')

@@ -20,8 +20,8 @@ let CounterController = class CounterController {
         this.service = service;
     }
     async getAll() {
-        const request = await this.service.getAll();
-        return request.length;
+        const responses = await this.service.getAll();
+        return `views: ${responses.views.length} | clicks: ${responses.clicks.length}`;
     }
     create(counter) {
         return this.service.create(counter);

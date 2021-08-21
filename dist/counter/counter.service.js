@@ -21,8 +21,9 @@ let CounterService = class CounterService {
         this.counterModel = counterModel;
     }
     async getAll() {
-        const result = await this.counterModel.find().exec();
-        return result;
+        const views = await this.counterModel.find({ type: 'view' }).exec();
+        const clicks = await this.counterModel.find({ type: 'click' }).exec();
+        return { views, clicks };
     }
     async create(doc) {
         const result = await new this.counterModel(doc).save();
